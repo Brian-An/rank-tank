@@ -34,7 +34,7 @@ export function ResultsPanel({ score, perfect, playerOrder, correctOrder, catego
   }, [score, category.title, playerOrder, correctOrder])
 
   return (
-    <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="space-y-6 animate-in fade-in duration-500">
       <ScoreDisplay score={score} perfect={perfect} />
 
       {commentary ? (

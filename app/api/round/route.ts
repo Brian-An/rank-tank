@@ -9,8 +9,12 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   const mode = searchParams.get('mode') ?? 'daily'
   const date = searchParams.get('date') ?? new Date().toISOString().split('T')[0]
-  const theme = searchParams.get('theme') as Theme | null
-  const difficulty = (searchParams.get('difficulty') as Difficulty | null) ?? 'medium'
+  const VALID_THEMES = ['tech', 'music', 'geography', 'sports', 'business', 'science', 'movies'] as const
+  const VALID_DIFFICULTIES = ['easy', 'medium', 'hard'] as const
+  const rawTheme = searchParams.get('theme')
+  const theme: Theme | null = VALID_THEMES.includes(rawTheme as Theme) ? (rawTheme as Theme) : null
+  const rawDiff = searchParams.get('difficulty')
+  const difficulty: Difficulty = VALID_DIFFICULTIES.includes(rawDiff as Difficulty) ? (rawDiff as Difficulty) : 'medium'
   const seed = searchParams.get('seed') ?? date
 
   try {

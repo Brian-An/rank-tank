@@ -10,8 +10,15 @@ export async function POST(request: Request) {
       correctOrder: string[]
     }
 
-    const aiText = await generateCommentary(score, title, playerOrder, correctOrder)
-    const text = aiText ?? getFallbackCommentary(score, title)
+    if (typeof score !== 'number' || score < 0 || score > 100) {
+      return Response.json({ error: 'Invalid input' }, { status: 400 })
+    }
+    const safeTitle = String(title).slice(0, 200)
+    const safePlayerOrder = Array.isArray(playerOrder) ? playerOrder.slice(0, 10).map((s) => String(s).slice(0, 100)) : []
+    const safeCorrectOrder = Array.isArray(correctOrder) ? correctOrder.slice(0, 10).map((s) => String(s).slice(0, 100)) : []
+
+    const aiText = await generateCommentary(score, safeTitle, safePlayerOrder, safeCorrectOrder)
+    const text = aiText ?? getFallbackCommentary(score, safeTitle)
 
     return Response.json({ text, isAI: !!aiText })
   } catch {
