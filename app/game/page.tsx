@@ -1,3 +1,5 @@
+import { Suspense } from 'react'
+import { connection } from 'next/server'
 import { redirect } from 'next/navigation'
 import { GameClient } from './GameClient'
 import { getLocalRound } from '@/lib/localRounds'
@@ -6,11 +8,12 @@ import { generateRound } from '@/lib/openai'
 import { shuffle } from '@/lib/seed'
 import type { Theme, Difficulty } from '@/lib/types'
 
-export default async function GamePage({
+async function GameLoader({
   searchParams,
 }: {
   searchParams: Promise<{ mode?: string; theme?: string; difficulty?: string; seed?: string }>
 }) {
+  await connection()
   const params = await searchParams
   const mode = params.mode ?? 'daily'
   const theme = params.theme as Theme | undefined
@@ -42,4 +45,16 @@ export default async function GamePage({
   const shuffledItems = shuffle(category.items, seed)
 
   return <GameClient category={category} shuffledItems={shuffledItems} isDaily={isDaily} />
+}
+
+export default function GamePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ mode?: string; theme?: string; difficulty?: string; seed?: string }>
+}) {
+  return (
+    <Suspense fallback={null}>
+      <GameLoader searchParams={searchParams} />
+    </Suspense>
+  )
 }
