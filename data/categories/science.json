@@ -1,0 +1,32 @@
+[
+  {
+    "id": "planet-sun-distance",
+    "title": "Rank these planets from closest to farthest from the Sun",
+    "theme": "science",
+    "difficulty": "easy",
+    "unit": "million km from Sun",
+    "items": [
+      { "id": "1", "label": "Mercury", "value": 579, "display": "57.9M km" },
+      { "id": "2", "label": "Venus", "value": 1082, "display": "108.2M km" },
+      { "id": "3", "label": "Earth", "value": 1496, "display": "149.6M km" },
+      { "id": "4", "label": "Mars", "value": 2279, "display": "227.9M km" },
+      { "id": "5", "label": "Jupiter", "value": 7783, "display": "778.3M km" }
+    ],
+    "source": "NASA"
+  },
+  {
+    "id": "animal-top-speeds",
+    "title": "Rank these animals from fastest to slowest top speed",
+    "theme": "science",
+    "difficulty": "medium",
+    "unit": "km/h",
+    "items": [
+      { "id": "1", "label": "Cheetah", "value": 120, "display": "120 km/h" },
+      { "id": "2", "label": "Pronghorn Antelope", "value": 98, "display": "98 km/h" },
+      { "id": "3", "label": "Lion", "value": 80, "display": "80 km/h" },
+      { "id": "4", "label": "Greyhound", "value": 72, "display": "72 km/h" },
+      { "id": "5", "label": "Horse", "value": 55, "display": "55 km/h" }
+    ],
+    "source": "National Geographic"
+  }
+]

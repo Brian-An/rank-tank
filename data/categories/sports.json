@@ -1,0 +1,47 @@
+[
+  {
+    "id": "world-cup-wins",
+    "title": "Rank these nations from most to fewest FIFA World Cup titles",
+    "theme": "sports",
+    "difficulty": "easy",
+    "unit": "World Cup titles",
+    "items": [
+      { "id": "1", "label": "Brazil", "value": 5, "display": "5" },
+      { "id": "2", "label": "Germany", "value": 4, "display": "4" },
+      { "id": "3", "label": "Italy", "value": 4, "display": "4" },
+      { "id": "4", "label": "Argentina", "value": 3, "display": "3" },
+      { "id": "5", "label": "France", "value": 2, "display": "2" }
+    ],
+    "source": "FIFA, 2024"
+  },
+  {
+    "id": "nba-alltime-scorers",
+    "title": "Rank these NBA players from most to fewest all-time career points",
+    "theme": "sports",
+    "difficulty": "medium",
+    "unit": "career points",
+    "items": [
+      { "id": "1", "label": "LeBron James", "value": 40000, "display": "40,000+" },
+      { "id": "2", "label": "Kareem Abdul-Jabbar", "value": 38387, "display": "38,387" },
+      { "id": "3", "label": "Karl Malone", "value": 36928, "display": "36,928" },
+      { "id": "4", "label": "Kobe Bryant", "value": 33643, "display": "33,643" },
+      { "id": "5", "label": "Michael Jordan", "value": 32292, "display": "32,292" }
+    ],
+    "source": "NBA, 2024"
+  },
+  {
+    "id": "paris-2024-gold-medals",
+    "title": "Rank these countries from most to fewest gold medals at Paris 2024 Olympics",
+    "theme": "sports",
+    "difficulty": "medium",
+    "unit": "gold medals",
+    "items": [
+      { "id": "1", "label": "United States", "value": 40, "display": "40" },
+      { "id": "2", "label": "China", "value": 40, "display": "40" },
+      { "id": "3", "label": "Great Britain", "value": 20, "display": "20" },
+      { "id": "4", "label": "Australia", "value": 18, "display": "18" },
+      { "id": "5", "label": "France", "value": 16, "display": "16" }
+    ],
+    "source": "IOC, 2024"
+  }
+]

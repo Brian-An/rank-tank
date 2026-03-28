@@ -1,0 +1,62 @@
+[
+  {
+    "id": "github-stars",
+    "title": "Rank these GitHub repos from most to fewest stars",
+    "theme": "tech",
+    "difficulty": "medium",
+    "unit": "GitHub stars",
+    "items": [
+      { "id": "1", "label": "freeCodeCamp", "value": 400000, "display": "~400K" },
+      { "id": "2", "label": "free-programming-books", "value": 338000, "display": "~338K" },
+      { "id": "3", "label": "awesome", "value": 325000, "display": "~325K" },
+      { "id": "4", "label": "coding-interview-university", "value": 310000, "display": "~310K" },
+      { "id": "5", "label": "developer-roadmap", "value": 298000, "display": "~298K" }
+    ],
+    "source": "GitHub, 2024"
+  },
+  {
+    "id": "npm-weekly-downloads",
+    "title": "Rank these npm packages from most to fewest weekly downloads",
+    "theme": "tech",
+    "difficulty": "hard",
+    "unit": "weekly downloads",
+    "items": [
+      { "id": "1", "label": "tslib", "value": 180000000, "display": "180M" },
+      { "id": "2", "label": "lodash", "value": 52000000, "display": "52M" },
+      { "id": "3", "label": "react", "value": 25000000, "display": "25M" },
+      { "id": "4", "label": "axios", "value": 9000000, "display": "9M" },
+      { "id": "5", "label": "express", "value": 7000000, "display": "7M" }
+    ],
+    "source": "npm, 2024"
+  },
+  {
+    "id": "programming-language-popularity",
+    "title": "Rank these languages by developer usage (Stack Overflow Survey 2024)",
+    "theme": "tech",
+    "difficulty": "easy",
+    "unit": "% of devs using it",
+    "items": [
+      { "id": "1", "label": "JavaScript", "value": 6240, "display": "62.4%" },
+      { "id": "2", "label": "Python", "value": 5090, "display": "50.9%" },
+      { "id": "3", "label": "TypeScript", "value": 3830, "display": "38.3%" },
+      { "id": "4", "label": "Java", "value": 3020, "display": "30.2%" },
+      { "id": "5", "label": "C#", "value": 2730, "display": "27.3%" }
+    ],
+    "source": "Stack Overflow Developer Survey, 2024"
+  },
+  {
+    "id": "browser-market-share",
+    "title": "Rank these browsers from highest to lowest global market share",
+    "theme": "tech",
+    "difficulty": "easy",
+    "unit": "% market share",
+    "items": [
+      { "id": "1", "label": "Chrome", "value": 6470, "display": "64.7%" },
+      { "id": "2", "label": "Safari", "value": 1850, "display": "18.5%" },
+      { "id": "3", "label": "Edge", "value": 520, "display": "5.2%" },
+      { "id": "4", "label": "Firefox", "value": 300, "display": "3.0%" },
+      { "id": "5", "label": "Samsung Internet", "value": 260, "display": "2.6%" }
+    ],
+    "source": "StatCounter, 2024"
+  }
+]

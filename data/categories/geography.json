@@ -1,0 +1,47 @@
+[
+  {
+    "id": "country-population",
+    "title": "Rank these countries from largest to smallest population",
+    "theme": "geography",
+    "difficulty": "easy",
+    "unit": "population",
+    "items": [
+      { "id": "1", "label": "India", "value": 1441000000, "display": "1.44B" },
+      { "id": "2", "label": "China", "value": 1413000000, "display": "1.41B" },
+      { "id": "3", "label": "United States", "value": 340000000, "display": "340M" },
+      { "id": "4", "label": "Indonesia", "value": 278000000, "display": "278M" },
+      { "id": "5", "label": "Pakistan", "value": 236000000, "display": "236M" }
+    ],
+    "source": "UN World Population, 2024"
+  },
+  {
+    "id": "city-population-metro",
+    "title": "Rank these cities from largest to smallest metro population",
+    "theme": "geography",
+    "difficulty": "medium",
+    "unit": "metro population",
+    "items": [
+      { "id": "1", "label": "Tokyo", "value": 37400000, "display": "37.4M" },
+      { "id": "2", "label": "Delhi", "value": 32900000, "display": "32.9M" },
+      { "id": "3", "label": "Shanghai", "value": 29200000, "display": "29.2M" },
+      { "id": "4", "label": "Dhaka", "value": 23200000, "display": "23.2M" },
+      { "id": "5", "label": "Cairo", "value": 21900000, "display": "21.9M" }
+    ],
+    "source": "UN, 2024"
+  },
+  {
+    "id": "country-area",
+    "title": "Rank these countries from largest to smallest land area",
+    "theme": "geography",
+    "difficulty": "easy",
+    "unit": "km²",
+    "items": [
+      { "id": "1", "label": "Russia", "value": 17098000, "display": "17.1M km²" },
+      { "id": "2", "label": "Canada", "value": 9985000, "display": "9.99M km²" },
+      { "id": "3", "label": "United States", "value": 9834000, "display": "9.83M km²" },
+      { "id": "4", "label": "China", "value": 9597000, "display": "9.60M km²" },
+      { "id": "5", "label": "Brazil", "value": 8516000, "display": "8.52M km²" }
+    ],
+    "source": "World Bank, 2024"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "box-office-alltime",
+    "title": "Rank these films from highest to lowest worldwide box office gross",
+    "theme": "movies",
+    "difficulty": "medium",
+    "unit": "worldwide gross",
+    "items": [
+      { "id": "1", "label": "Avatar (2009)", "value": 2924, "display": "$2.92B" },
+      { "id": "2", "label": "Avengers: Endgame (2019)", "value": 2799, "display": "$2.80B" },
+      { "id": "3", "label": "Avatar: The Way of Water (2022)", "value": 2320, "display": "$2.32B" },
+      { "id": "4", "label": "Titanic (1997)", "value": 2264, "display": "$2.26B" },
+      { "id": "5", "label": "Star Wars: The Force Awakens (2015)", "value": 2073, "display": "$2.07B" }
+    ],
+    "source": "Box Office Mojo, 2024"
+  },
+  {
+    "id": "imdb-top-rated",
+    "title": "Rank these films from highest to lowest IMDb rating",
+    "theme": "movies",
+    "difficulty": "hard",
+    "unit": "IMDb rating",
+    "items": [
+      { "id": "1", "label": "The Shawshank Redemption (1994)", "value": 93, "display": "9.3" },
+      { "id": "2", "label": "The Godfather (1972)", "value": 92, "display": "9.2" },
+      { "id": "3", "label": "The Dark Knight (2008)", "value": 90, "display": "9.0" },
+      { "id": "4", "label": "The Godfather Part II (1974)", "value": 90, "display": "9.0" },
+      { "id": "5", "label": "Schindler's List (1993)", "value": 89, "display": "8.9" }
+    ],
+    "source": "IMDb, 2024"
+  }
+]

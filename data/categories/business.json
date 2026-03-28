@@ -1,0 +1,47 @@
+[
+  {
+    "id": "market-cap-2024",
+    "title": "Rank these companies from highest to lowest market cap (2024)",
+    "theme": "business",
+    "difficulty": "medium",
+    "unit": "USD (billions)",
+    "items": [
+      { "id": "1", "label": "Apple", "value": 3500, "display": "$3.5T" },
+      { "id": "2", "label": "NVIDIA", "value": 3300, "display": "$3.3T" },
+      { "id": "3", "label": "Microsoft", "value": 3000, "display": "$3.0T" },
+      { "id": "4", "label": "Amazon", "value": 2300, "display": "$2.3T" },
+      { "id": "5", "label": "Alphabet (Google)", "value": 2100, "display": "$2.1T" }
+    ],
+    "source": "Financial markets, 2024"
+  },
+  {
+    "id": "billionaires-2024",
+    "title": "Rank these billionaires from highest to lowest net worth",
+    "theme": "business",
+    "difficulty": "easy",
+    "unit": "net worth (USD billions)",
+    "items": [
+      { "id": "1", "label": "Elon Musk", "value": 330, "display": "$330B" },
+      { "id": "2", "label": "Jeff Bezos", "value": 230, "display": "$230B" },
+      { "id": "3", "label": "Mark Zuckerberg", "value": 210, "display": "$210B" },
+      { "id": "4", "label": "Larry Ellison", "value": 190, "display": "$190B" },
+      { "id": "5", "label": "Bill Gates", "value": 130, "display": "$130B" }
+    ],
+    "source": "Forbes, 2024"
+  },
+  {
+    "id": "big-tech-revenue-2023",
+    "title": "Rank these tech companies from highest to lowest annual revenue (2023)",
+    "theme": "business",
+    "difficulty": "hard",
+    "unit": "annual revenue (USD billions)",
+    "items": [
+      { "id": "1", "label": "Amazon", "value": 575, "display": "$575B" },
+      { "id": "2", "label": "Apple", "value": 383, "display": "$383B" },
+      { "id": "3", "label": "Alphabet (Google)", "value": 307, "display": "$307B" },
+      { "id": "4", "label": "Microsoft", "value": 212, "display": "$212B" },
+      { "id": "5", "label": "Meta", "value": 135, "display": "$135B" }
+    ],
+    "source": "Company annual reports, 2023"
+  }
+]

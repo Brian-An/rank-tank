@@ -1,0 +1,47 @@
+[
+  {
+    "id": "spotify-streams-alltime",
+    "title": "Rank these songs from most to fewest all-time Spotify streams",
+    "theme": "music",
+    "difficulty": "medium",
+    "unit": "Spotify streams",
+    "items": [
+      { "id": "1", "label": "Blinding Lights — The Weeknd", "value": 4100000000, "display": "4.1B" },
+      { "id": "2", "label": "Shape of You — Ed Sheeran", "value": 3800000000, "display": "3.8B" },
+      { "id": "3", "label": "Dance Monkey — Tones and I", "value": 3600000000, "display": "3.6B" },
+      { "id": "4", "label": "Sunflower — Post Malone & Swae Lee", "value": 3500000000, "display": "3.5B" },
+      { "id": "5", "label": "One Dance — Drake", "value": 3200000000, "display": "3.2B" }
+    ],
+    "source": "Spotify, 2024"
+  },
+  {
+    "id": "spotify-monthly-listeners",
+    "title": "Rank these artists from most to fewest Spotify monthly listeners",
+    "theme": "music",
+    "difficulty": "medium",
+    "unit": "monthly listeners",
+    "items": [
+      { "id": "1", "label": "The Weeknd", "value": 110000000, "display": "110M" },
+      { "id": "2", "label": "Taylor Swift", "value": 107000000, "display": "107M" },
+      { "id": "3", "label": "Bad Bunny", "value": 95000000, "display": "95M" },
+      { "id": "4", "label": "Drake", "value": 88000000, "display": "88M" },
+      { "id": "5", "label": "Billie Eilish", "value": 84000000, "display": "84M" }
+    ],
+    "source": "Spotify, 2024"
+  },
+  {
+    "id": "grammy-nominations",
+    "title": "Rank these artists from most to fewest all-time Grammy nominations",
+    "theme": "music",
+    "difficulty": "hard",
+    "unit": "Grammy nominations",
+    "items": [
+      { "id": "1", "label": "Beyoncé", "value": 88, "display": "88" },
+      { "id": "2", "label": "Jay-Z", "value": 83, "display": "83" },
+      { "id": "3", "label": "Paul McCartney", "value": 81, "display": "81" },
+      { "id": "4", "label": "Taylor Swift", "value": 52, "display": "52" },
+      { "id": "5", "label": "Kanye West", "value": 24, "display": "24" }
+    ],
+    "source": "Recording Academy, 2024"
+  }
+]
