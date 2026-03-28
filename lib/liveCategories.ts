@@ -98,6 +98,7 @@ async function fetchWikipediaPageviews(): Promise<Category> {
       if (!res.ok) throw new Error(`Wikipedia ${res.status}`)
       const data = await res.json() as { items: { views: number }[] }
       const v = data.items[0]?.views ?? 0
+      if (v === 0) throw new Error(`Wikipedia returned no pageviews for ${article}`)
       const display = v >= 1_000_000 ? `${(v / 1_000_000).toFixed(1)}M` : `${Math.round(v / 1000)}K`
       return { label, value: v, display }
     })
@@ -138,8 +139,8 @@ export async function fetchLiveCategories(): Promise<Category[]> {
     .filter((r): r is PromiseFulfilledResult<Category> => r.status === 'fulfilled')
     .map(r => r.value)
 
-  if (data.length > 0) {
-    cache = { data, fetchedAt: Date.now() }
-  }
+  // Cache successes for 24 hours; cache failures for 60 seconds to avoid thundering herd
+  const ttl = data.length > 0 ? CACHE_TTL : 60_000
+  cache = { data, fetchedAt: Date.now() - (CACHE_TTL - ttl) }
   return data
 }

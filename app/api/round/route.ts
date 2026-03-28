@@ -1,9 +1,10 @@
 import type { NextRequest } from 'next/server'
 import type { Theme, Difficulty } from '@/lib/types'
-import { shuffle } from '@/lib/seed'
+import { shuffle, pickIndex } from '@/lib/seed'
 import { getLocalRound } from '@/lib/localRounds'
 import { getCachedRound, setCachedRound } from '@/lib/roundCache'
 import { generateRound } from '@/lib/openai'
+import { fetchLiveCategories } from '@/lib/liveCategories'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
@@ -21,7 +22,13 @@ export async function GET(request: NextRequest) {
     let category
 
     if (mode === 'daily') {
-      category = getLocalRound(date)
+      const liveCategories = await fetchLiveCategories()
+      if (liveCategories.length > 0) {
+        const idx = pickIndex(liveCategories.length, date)
+        category = liveCategories[idx]
+      } else {
+        category = getLocalRound(date)
+      }
     } else {
       const cacheTheme = theme ?? 'mixed'
       category = getCachedRound(cacheTheme, difficulty)
