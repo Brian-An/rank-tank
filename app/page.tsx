@@ -4,7 +4,7 @@ import { ThemeSelector } from '@/components/ThemeSelector'
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#0A0E1A] py-8 px-4">
+    <main className="min-h-screen bg-white py-8 px-4">
       <div className="max-w-lg mx-auto space-y-8">
         <LandingHero />
         <ThemeSelector />
