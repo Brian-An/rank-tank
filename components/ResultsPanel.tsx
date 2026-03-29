@@ -34,13 +34,13 @@ export function ResultsPanel({ score, perfect, playerOrder, correctOrder, catego
   }, [score, category.title, playerOrder, correctOrder])
 
   return (
-    <div className="space-y-6 animate-in fade-in duration-500">
+    <div className="space-y-6 animate-in fade-in duration-200">
       <ScoreDisplay score={score} perfect={perfect} />
 
       {commentary ? (
         <CommentaryCard text={commentary.text} isAI={commentary.isAI} />
       ) : (
-        <div className="h-20 bg-white border rounded-2xl animate-pulse" style={{ borderColor: 'var(--border)' }} />
+        <div className="h-20 bg-white border rounded-2xl motion-safe:animate-pulse" style={{ borderColor: 'var(--border)' }} />
       )}
 
       <div className="flex items-center justify-center gap-3">

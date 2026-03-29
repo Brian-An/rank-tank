@@ -29,9 +29,9 @@ export function ScoreDisplay({ score, perfect }: { score: number; perfect: boole
       >
         {displayed}
       </div>
-      <div className="text-neutral-400 text-base mt-1">out of 100</div>
+      <div className="text-neutral-400 text-base mt-1 text-pretty">out of 100</div>
       {perfect && (
-        <div className="text-amber-500 font-bold mt-2 text-sm tracking-widest uppercase animate-pulse">
+        <div className="text-amber-500 font-bold mt-2 text-sm tracking-widest uppercase motion-safe:animate-pulse">
           Perfect Round!
         </div>
       )}

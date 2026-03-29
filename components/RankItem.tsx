@@ -41,7 +41,7 @@ export function RankItem({ item, index, locked, revealedCorrectIndex }: Props) {
       {...attributes}
     >
       {/* Position number */}
-      <div className="text-neutral-300 text-sm font-mono w-5 text-center shrink-0">{index + 1}</div>
+      <div className="text-neutral-300 text-sm font-mono w-5 text-center shrink-0 tabular-nums">{index + 1}</div>
 
       {/* Drag handle */}
       {!locked && (
@@ -64,11 +64,11 @@ export function RankItem({ item, index, locked, revealedCorrectIndex }: Props) {
       {/* Reveal: show correct rank + value */}
       {isRevealed && (
         <div className="flex items-center gap-2 shrink-0">
-          <span className="text-neutral-400 text-sm font-mono">{item.display}</span>
+          <span className="text-neutral-400 text-sm font-mono tabular-nums">{item.display}</span>
           {isCorrect ? (
             <span className="text-green-600 text-sm font-bold">✓</span>
           ) : (
-            <span className="text-red-500 text-xs font-mono">#{revealedCorrectIndex! + 1}</span>
+            <span className="text-red-500 text-xs font-mono tabular-nums">#{revealedCorrectIndex! + 1}</span>
           )}
         </div>
       )}

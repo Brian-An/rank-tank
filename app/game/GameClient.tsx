@@ -31,7 +31,7 @@ export function GameClient({ category, shuffledItems, isDaily }: Props) {
   const scoreResult = submitted ? calculateScore(items.map((i) => i.id), correctOrder) : null
 
   return (
-    <div className="min-h-screen py-8 px-4" style={{ background: 'var(--background)' }}>
+    <div className="min-h-dvh py-8 px-4" style={{ background: 'var(--background)' }}>
       <div className="max-w-lg mx-auto space-y-8">
         {/* Back link */}
         <a href="/" className="inline-flex items-center gap-1.5 text-neutral-400 hover:text-neutral-700 text-sm transition-colors">
