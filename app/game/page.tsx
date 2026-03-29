@@ -33,8 +33,13 @@ async function GameLoader({
   if (isDaily) {
     category = getLocalRound(today)
   } else {
+    // Skip cache when an explicit seed is provided (e.g. Play Again) so the
+    // seed deterministically picks a fresh local round instead of the cached one.
+    const hasSeed = !!params.seed
     const cacheTheme = theme ?? 'mixed'
-    category = getCachedRound(cacheTheme, difficulty)
+    if (!hasSeed) {
+      category = getCachedRound(cacheTheme, difficulty)
+    }
 
     if (!category) {
       if (theme) {
@@ -42,7 +47,7 @@ async function GameLoader({
       } else {
         category = getLocalRound(seed)
       }
-      if (category) setCachedRound(cacheTheme, difficulty, category)
+      if (category && !hasSeed) setCachedRound(cacheTheme, difficulty, category)
     }
   }
 

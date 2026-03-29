@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { RankList } from '@/components/RankList'
 import { GameHeader } from '@/components/GameHeader'
 import { ResultsPanel } from '@/components/ResultsPanel'
@@ -15,7 +14,6 @@ interface Props {
 }
 
 export function GameClient({ category, shuffledItems, isDaily, isCustom }: Props) {
-  const router = useRouter()
   const [items, setItems] = useState<RankItem[]>(shuffledItems)
   const [submitted, setSubmitted] = useState(false)
   const [hint, setHint] = useState<string | null>(null)
@@ -43,15 +41,16 @@ export function GameClient({ category, shuffledItems, isDaily, isCustom }: Props
 
   function handlePlayAgain() {
     if (isCustom) {
-      router.push('/')
+      window.location.href = '/'
       return
     }
     const seed = Date.now().toString()
-    if (isDaily) {
-      router.push(`/game?mode=random&seed=${seed}`)
-    } else {
-      router.push(`/game?mode=random&theme=${category.theme}&difficulty=${category.difficulty}&seed=${seed}`)
-    }
+    const url = isDaily
+      ? `/game?mode=random&seed=${seed}`
+      : `/game?mode=random&theme=${category.theme}&difficulty=${category.difficulty}&seed=${seed}`
+    // Use hard navigation to bypass Next.js client-side router cache,
+    // which would otherwise serve the same rendered page for 30 seconds.
+    window.location.href = url
   }
 
   async function handleHint() {
