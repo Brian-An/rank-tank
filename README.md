@@ -27,10 +27,6 @@ Open [http://localhost:3000](http://localhost:3000).
 3. Add `OPENAI_API_KEY` in Vercel → Settings → Environment Variables (optional)
 4. Deploy
 
-## Cost
-
-With an API key, AI calls use `gpt-4o-mini` (~$0.0002/game). Without a key, all features work using local data and template commentary.
-
 ## Tech
 
 - Next.js 16 App Router
