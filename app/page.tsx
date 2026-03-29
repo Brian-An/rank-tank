@@ -11,7 +11,7 @@ export default function HomePage() {
         <HowToPlay />
 
         {/* Footer */}
-        <p className="text-center text-white/20 text-xs pb-4">
+        <p className="text-center text-neutral-300 text-xs pb-4">
           Built with Next.js · Data sourced from public records
         </p>
       </div>
