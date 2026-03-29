@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Rank Tank — Can you rank them right?',
+  title: 'Rank Tank',
   description: 'A game-show-style ranking game. Drag items into the correct order and see how you score.',
   openGraph: {
     title: 'Rank Tank',

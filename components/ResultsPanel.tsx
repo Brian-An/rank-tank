@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { ScoreDisplay } from './ScoreDisplay'
 import { CommentaryCard } from './CommentaryCard'
-import { ShareButton } from './ShareButton'
+import { ShareModal } from './ShareModal'
 import type { RankItem, CommentaryResult } from '@/lib/types'
 
 interface Props {
@@ -50,7 +50,7 @@ export function ResultsPanel({ score, perfect, playerOrder, correctOrder, catego
         >
           Play Again
         </button>
-        <ShareButton
+        <ShareModal
           score={score}
           title={category.title}
           playerOrder={playerOrder}
