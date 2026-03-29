@@ -4,14 +4,14 @@ import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import type { Theme, Difficulty } from '@/lib/types'
 
-const THEMES: { id: Theme; label: string; emoji: string }[] = [
-  { id: 'tech', label: 'Tech', emoji: '💻' },
-  { id: 'music', label: 'Music', emoji: '🎵' },
-  { id: 'geography', label: 'Geography', emoji: '🌍' },
-  { id: 'sports', label: 'Sports', emoji: '🏆' },
-  { id: 'business', label: 'Business', emoji: '💼' },
-  { id: 'science', label: 'Science', emoji: '🔬' },
-  { id: 'movies', label: 'Movies', emoji: '🎬' },
+const THEMES: { id: Theme; label: string }[] = [
+  { id: 'tech', label: 'Tech' },
+  { id: 'music', label: 'Music' },
+  { id: 'geography', label: 'Geography' },
+  { id: 'sports', label: 'Sports' },
+  { id: 'business', label: 'Business' },
+  { id: 'science', label: 'Science' },
+  { id: 'movies', label: 'Movies' },
 ]
 
 const DIFFICULTIES: Difficulty[] = ['easy', 'medium', 'hard']
@@ -29,7 +29,7 @@ export function ThemeSelector() {
   }
 
   return (
-    <div className="border border-neutral-200 rounded-2xl p-6 space-y-5">
+    <div className="bg-white border rounded-2xl p-6 space-y-5" style={{ borderColor: 'var(--border)' }}>
       <h2 className="text-neutral-900 font-bold text-lg">Random Round</h2>
 
       {/* Theme grid */}
@@ -44,10 +44,10 @@ export function ThemeSelector() {
                 'flex flex-col items-center gap-1 p-2 rounded-lg border text-xs font-medium transition-all',
                 selectedTheme === t.id
                   ? 'border-neutral-900 bg-neutral-900 text-white'
-                  : 'border-neutral-200 bg-neutral-50 text-neutral-600 hover:border-neutral-400 hover:text-neutral-900',
+                  : 'text-neutral-600 hover:border-neutral-400 hover:text-neutral-900',
               )}
+              style={selectedTheme !== t.id ? { borderColor: 'var(--border)', background: 'var(--background)' } : {}}
             >
-              <span className="text-lg">{t.emoji}</span>
               {t.label}
             </button>
           ))}
@@ -66,8 +66,9 @@ export function ThemeSelector() {
                 'flex-1 py-3 rounded-lg border text-sm font-medium capitalize transition-all',
                 selectedDifficulty === d
                   ? 'border-neutral-900 bg-neutral-900 text-white'
-                  : 'border-neutral-200 bg-neutral-50 text-neutral-600 hover:border-neutral-400 hover:text-neutral-900',
+                  : 'text-neutral-600 hover:border-neutral-400 hover:text-neutral-900',
               )}
+              style={selectedDifficulty !== d ? { borderColor: 'var(--border)', background: 'var(--background)' } : {}}
             >
               {d}
             </button>

@@ -25,11 +25,16 @@ export function RankItem({ item, index, locked, revealedCorrectIndex }: Props) {
   return (
     <div
       ref={setNodeRef}
-      style={style}
+      style={{
+        ...style,
+        borderColor: isRevealed
+          ? undefined
+          : 'var(--border)',
+      }}
       className={cn(
         'flex items-center gap-3 p-4 rounded-xl border transition-all duration-200 select-none',
         isDragging ? 'opacity-50 z-50 shadow-lg' : '',
-        !isRevealed && !isDragging && 'bg-white border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50',
+        !isRevealed && !isDragging && 'bg-white hover:bg-neutral-50',
         isRevealed && isCorrect && 'bg-green-50 border-green-200',
         isRevealed && !isCorrect && 'bg-red-50 border-red-200',
       )}

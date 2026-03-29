@@ -10,8 +10,10 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #FAF7F4;
   --foreground: #111111;
+  --surface: #FFFFFF;
+  --border: #E8E2DC;
 }
 
 @theme inline {

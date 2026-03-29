@@ -16,7 +16,7 @@ export function LandingHero() {
       </div>
 
       {/* Daily challenge CTA */}
-      <div className="border border-neutral-200 rounded-2xl p-6 space-y-4">
+      <div className="bg-white border rounded-2xl p-6 space-y-4" style={{ borderColor: 'var(--border)' }}>
         <div className="space-y-1">
           <div className="flex items-center justify-center gap-1.5 text-neutral-700 text-sm font-semibold uppercase tracking-wide">
             <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />

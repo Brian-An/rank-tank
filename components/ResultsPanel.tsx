@@ -40,7 +40,7 @@ export function ResultsPanel({ score, perfect, playerOrder, correctOrder, catego
       {commentary ? (
         <CommentaryCard text={commentary.text} isAI={commentary.isAI} />
       ) : (
-        <div className="h-20 bg-neutral-100 border border-neutral-200 rounded-2xl animate-pulse" />
+        <div className="h-20 bg-white border rounded-2xl animate-pulse" style={{ borderColor: 'var(--border)' }} />
       )}
 
       <div className="flex items-center justify-center gap-3">

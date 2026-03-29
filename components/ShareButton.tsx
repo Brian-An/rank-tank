@@ -32,7 +32,8 @@ export function ShareButton({ score, title, playerOrder, correctOrder }: Props) 
   return (
     <button
       onClick={handleCopy}
-      className="flex items-center gap-2 px-4 py-3 rounded-xl border border-neutral-200 text-neutral-500 hover:text-neutral-900 hover:border-neutral-400 transition-all text-sm"
+      className="flex items-center gap-2 px-4 py-3 rounded-xl border text-neutral-500 hover:text-neutral-900 hover:border-neutral-400 transition-all text-sm"
+      style={{ borderColor: 'var(--border)' }}
     >
       {copied ? '✓ Copied!' : 'Share result'}
     </button>
