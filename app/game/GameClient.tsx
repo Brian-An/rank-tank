@@ -31,10 +31,10 @@ export function GameClient({ category, shuffledItems, isDaily }: Props) {
   const scoreResult = submitted ? calculateScore(items.map((i) => i.id), correctOrder) : null
 
   return (
-    <div className="min-h-screen bg-[#0A0E1A] py-8 px-4">
+    <div className="min-h-screen bg-white py-8 px-4">
       <div className="max-w-lg mx-auto space-y-8">
         {/* Back link */}
-        <a href="/" className="inline-flex items-center gap-1.5 text-white/40 hover:text-white/70 text-sm transition-colors">
+        <a href="/" className="inline-flex items-center gap-1.5 text-neutral-400 hover:text-neutral-700 text-sm transition-colors">
           ← Back
         </a>
 
@@ -51,7 +51,7 @@ export function GameClient({ category, shuffledItems, isDaily }: Props) {
         {!submitted ? (
           <button
             onClick={handleSubmit}
-            className="w-full py-4 rounded-xl bg-yellow-400 text-black font-bold text-lg hover:bg-yellow-300 active:scale-95 transition-all"
+            className="w-full py-4 rounded-xl bg-neutral-900 text-white font-bold text-lg hover:bg-neutral-800 active:scale-95 transition-all"
           >
             Submit Ranking
           </button>
