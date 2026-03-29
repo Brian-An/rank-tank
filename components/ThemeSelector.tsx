@@ -29,12 +29,12 @@ export function ThemeSelector() {
   }
 
   return (
-    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-5">
-      <h2 className="text-white font-bold text-lg">Random Round</h2>
+    <div className="border border-neutral-200 rounded-2xl p-6 space-y-5">
+      <h2 className="text-neutral-900 font-bold text-lg">Random Round</h2>
 
       {/* Theme grid */}
       <div>
-        <p className="text-white/40 text-xs uppercase tracking-widest mb-2">Theme (optional)</p>
+        <p className="text-neutral-400 text-xs uppercase tracking-widest mb-2">Theme (optional)</p>
         <div className="grid grid-cols-4 gap-2">
           {THEMES.map((t) => (
             <button
@@ -43,8 +43,8 @@ export function ThemeSelector() {
               className={cn(
                 'flex flex-col items-center gap-1 p-2 rounded-lg border text-xs font-medium transition-all',
                 selectedTheme === t.id
-                  ? 'border-yellow-400/60 bg-yellow-400/10 text-yellow-400'
-                  : 'border-white/10 bg-white/5 text-white/60 hover:border-white/30 hover:text-white',
+                  ? 'border-neutral-900 bg-neutral-900 text-white'
+                  : 'border-neutral-200 bg-neutral-50 text-neutral-600 hover:border-neutral-400 hover:text-neutral-900',
               )}
             >
               <span className="text-lg">{t.emoji}</span>
@@ -56,17 +56,17 @@ export function ThemeSelector() {
 
       {/* Difficulty */}
       <div>
-        <p className="text-white/40 text-xs uppercase tracking-widest mb-2">Difficulty</p>
+        <p className="text-neutral-400 text-xs uppercase tracking-widest mb-2">Difficulty</p>
         <div className="flex gap-2">
           {DIFFICULTIES.map((d) => (
             <button
               key={d}
               onClick={() => setSelectedDifficulty(d)}
               className={cn(
-                'flex-1 py-2 rounded-lg border text-sm font-medium capitalize transition-all',
+                'flex-1 py-3 rounded-lg border text-sm font-medium capitalize transition-all',
                 selectedDifficulty === d
-                  ? 'border-yellow-400/60 bg-yellow-400/10 text-yellow-400'
-                  : 'border-white/10 bg-white/5 text-white/60 hover:border-white/30 hover:text-white',
+                  ? 'border-neutral-900 bg-neutral-900 text-white'
+                  : 'border-neutral-200 bg-neutral-50 text-neutral-600 hover:border-neutral-400 hover:text-neutral-900',
               )}
             >
               {d}
@@ -77,7 +77,7 @@ export function ThemeSelector() {
 
       <button
         onClick={handlePlay}
-        className="w-full py-3 rounded-xl bg-white/10 border border-white/20 text-white font-bold hover:bg-white/15 transition-all"
+        className="w-full py-3 rounded-xl bg-neutral-900 text-white font-bold hover:bg-neutral-800 transition-all"
       >
         Play Random Round
       </button>
