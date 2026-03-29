@@ -24,14 +24,14 @@ export function ScoreDisplay({ score, perfect }: { score: number; perfect: boole
       <div
         className={cn(
           'text-7xl sm:text-8xl font-black tabular-nums tracking-tight',
-          score >= 80 ? 'text-yellow-400' : score >= 50 ? 'text-orange-400' : 'text-red-400',
+          score >= 80 ? 'text-amber-500' : score >= 50 ? 'text-orange-500' : 'text-red-500',
         )}
       >
         {displayed}
       </div>
-      <div className="text-white/40 text-base mt-1">out of 100</div>
+      <div className="text-neutral-400 text-base mt-1">out of 100</div>
       {perfect && (
-        <div className="text-yellow-400 font-bold mt-2 text-sm tracking-widest uppercase animate-pulse">
+        <div className="text-amber-500 font-bold mt-2 text-sm tracking-widest uppercase animate-pulse">
           Perfect Round!
         </div>
       )}

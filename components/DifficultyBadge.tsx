@@ -2,9 +2,9 @@ import { cn } from '@/lib/utils'
 import type { Difficulty } from '@/lib/types'
 
 const DIFF_STYLES: Record<Difficulty, { label: string; classes: string }> = {
-  easy: { label: 'Easy', classes: 'bg-green-500/10 text-green-400 border-green-500/20' },
-  medium: { label: 'Medium', classes: 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20' },
-  hard: { label: 'Hard', classes: 'bg-red-500/10 text-red-400 border-red-500/20' },
+  easy: { label: 'Easy', classes: 'bg-green-50 text-green-700 border-green-200' },
+  medium: { label: 'Medium', classes: 'bg-amber-50 text-amber-700 border-amber-200' },
+  hard: { label: 'Hard', classes: 'bg-red-50 text-red-700 border-red-200' },
 }
 
 export function DifficultyBadge({ difficulty }: { difficulty: Difficulty }) {

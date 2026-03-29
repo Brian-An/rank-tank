@@ -40,13 +40,13 @@ export function ResultsPanel({ score, perfect, playerOrder, correctOrder, catego
       {commentary ? (
         <CommentaryCard text={commentary.text} isAI={commentary.isAI} />
       ) : (
-        <div className="h-20 bg-white/5 border border-white/10 rounded-2xl animate-pulse" />
+        <div className="h-20 bg-neutral-100 border border-neutral-200 rounded-2xl animate-pulse" />
       )}
 
       <div className="flex items-center justify-center gap-3">
         <button
           onClick={onPlayAgain}
-          className="px-6 py-3 rounded-xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition-colors text-sm"
+          className="px-6 py-3 rounded-xl bg-neutral-900 text-white font-bold hover:bg-neutral-800 transition-colors text-sm"
         >
           Play Again
         </button>

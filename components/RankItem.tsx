@@ -28,21 +28,21 @@ export function RankItem({ item, index, locked, revealedCorrectIndex }: Props) {
       style={style}
       className={cn(
         'flex items-center gap-3 p-4 rounded-xl border transition-all duration-200 select-none',
-        isDragging ? 'opacity-50 z-50 shadow-[0_0_30px_rgba(245,197,66,0.25)]' : '',
-        !isRevealed && !isDragging && 'bg-white/5 border-white/10 hover:bg-white/8 hover:border-white/20',
-        isRevealed && isCorrect && 'bg-green-500/10 border-green-500/40',
-        isRevealed && !isCorrect && 'bg-red-500/10 border-red-500/40',
+        isDragging ? 'opacity-50 z-50 shadow-lg' : '',
+        !isRevealed && !isDragging && 'bg-white border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50',
+        isRevealed && isCorrect && 'bg-green-50 border-green-200',
+        isRevealed && !isCorrect && 'bg-red-50 border-red-200',
       )}
       {...attributes}
     >
       {/* Position number */}
-      <div className="text-white/40 text-sm font-mono w-5 text-center shrink-0">{index + 1}</div>
+      <div className="text-neutral-300 text-sm font-mono w-5 text-center shrink-0">{index + 1}</div>
 
       {/* Drag handle */}
       {!locked && (
         <div
           {...listeners}
-          className="cursor-grab active:cursor-grabbing p-1 text-white/20 hover:text-white/60 transition-colors shrink-0"
+          className="cursor-grab active:cursor-grabbing p-1 text-neutral-300 hover:text-neutral-500 transition-colors shrink-0"
           aria-label="Drag to reorder"
         >
           <svg width="12" height="18" viewBox="0 0 12 18" fill="currentColor">
@@ -54,16 +54,16 @@ export function RankItem({ item, index, locked, revealedCorrectIndex }: Props) {
       )}
 
       {/* Label */}
-      <div className="flex-1 text-white font-medium text-sm sm:text-base">{item.label}</div>
+      <div className="flex-1 text-neutral-900 font-medium text-sm sm:text-base">{item.label}</div>
 
       {/* Reveal: show correct rank + value */}
       {isRevealed && (
         <div className="flex items-center gap-2 shrink-0">
-          <span className="text-white/50 text-sm font-mono">{item.display}</span>
+          <span className="text-neutral-400 text-sm font-mono">{item.display}</span>
           {isCorrect ? (
-            <span className="text-green-400 text-sm font-bold">✓</span>
+            <span className="text-green-600 text-sm font-bold">✓</span>
           ) : (
-            <span className="text-red-400 text-xs font-mono">#{revealedCorrectIndex! + 1}</span>
+            <span className="text-red-500 text-xs font-mono">#{revealedCorrectIndex! + 1}</span>
           )}
         </div>
       )}
