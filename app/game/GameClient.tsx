@@ -1,6 +1,20 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { RankList } from '@/components/RankList'
+import dynamic from 'next/dynamic'
+
+const RankList = dynamic(
+  () => import('@/components/RankList').then((m) => ({ default: m.RankList })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="space-y-2">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div key={i} className="h-16 rounded-xl border bg-white motion-safe:animate-pulse" style={{ borderColor: 'var(--border)' }} />
+        ))}
+      </div>
+    ),
+  },
+)
 import { GameHeader } from '@/components/GameHeader'
 import { ResultsPanel } from '@/components/ResultsPanel'
 import { calculateScore } from '@/lib/scoring'

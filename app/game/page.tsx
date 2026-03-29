@@ -6,7 +6,8 @@ import { CustomGameWrapper } from './CustomGameWrapper'
 import { getLocalRound } from '@/lib/localRounds'
 import { getCachedRound, setCachedRound } from '@/lib/roundCache'
 import { generateRound } from '@/lib/openai'
-import { shuffle } from '@/lib/seed'
+import { fetchLiveCategories } from '@/lib/liveCategories'
+import { shuffle, pickIndex } from '@/lib/seed'
 import type { Theme, Difficulty } from '@/lib/types'
 
 async function GameLoader({
@@ -31,7 +32,12 @@ async function GameLoader({
   let category
 
   if (isDaily) {
-    category = getLocalRound(today)
+    const liveCategories = await fetchLiveCategories()
+    if (liveCategories.length > 0) {
+      category = liveCategories[pickIndex(liveCategories.length, today)]
+    } else {
+      category = getLocalRound(today)
+    }
   } else {
     // Skip cache when an explicit seed is provided (e.g. Play Again) so the
     // seed deterministically picks a fresh local round instead of the cached one.

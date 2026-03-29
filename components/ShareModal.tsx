@@ -17,7 +17,7 @@ function buildShareText(score: number, title: string, playerOrder: RankItem[], c
       return `${isCorrect ? '✅' : '❌'} ${item.label}`
     })
     .join('\n')
-  return `🎮 Rank Tank\n\n${title}\nScore: ${score}/100\n\n${rows}\n\nranktank.vercel.app`
+  return `🎮 Rank Tank\n\n${title}\nScore: ${score}/100\n\n${rows}\n\nhttps://rank-tank-six.vercel.app/`
 }
 
 export function ShareModal({ score, title, playerOrder, correctOrder }: Props) {
@@ -98,7 +98,7 @@ export function ShareModal({ score, title, playerOrder, correctOrder }: Props) {
               X / Twitter
             </a>
             <a
-              href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Franktank.vercel.app"
+              href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frank-tank-six.vercel.app%2F"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 py-2.5 rounded-xl border text-neutral-600 text-sm font-medium hover:border-neutral-400 hover:text-neutral-900 transition-all"

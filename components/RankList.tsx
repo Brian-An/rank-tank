@@ -59,6 +59,7 @@ export function RankList({ items, correctOrder, locked, revealed, onReorder, exp
 
   return (
     <DndContext
+      id="rank-list"
       sensors={sensors}
       collisionDetection={closestCenter}
       modifiers={[restrictToVerticalAxis, restrictToWindowEdges]}

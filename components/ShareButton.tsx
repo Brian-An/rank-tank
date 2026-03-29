@@ -20,7 +20,7 @@ export function ShareButton({ score, title, playerOrder, correctOrder }: Props) 
       })
       .join('\n')
 
-    return `🎮 Rank Tank\n\n${title}\nScore: ${score}/100\n\n${rows}\n\nranktank.vercel.app`
+    return `🎮 Rank Tank\n\n${title}\nScore: ${score}/100\n\n${rows}\n\nhttps://rank-tank-six.vercel.app/`
   }
 
   async function handleCopy() {
