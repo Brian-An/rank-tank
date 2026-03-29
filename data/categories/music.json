@@ -43,5 +43,50 @@
       { "id": "5", "label": "Kanye West", "value": 24, "display": "24" }
     ],
     "source": "Recording Academy, 2024"
+  },
+  {
+    "id": "grammy-wins",
+    "title": "Rank these artists from most to fewest all-time Grammy wins",
+    "theme": "music",
+    "difficulty": "hard",
+    "unit": "Grammy wins",
+    "items": [
+      { "id": "1", "label": "Beyoncé", "value": 32, "display": "32" },
+      { "id": "2", "label": "Georg Solti", "value": 31, "display": "31" },
+      { "id": "3", "label": "Quincy Jones", "value": 28, "display": "28" },
+      { "id": "4", "label": "Alison Krauss", "value": 27, "display": "27" },
+      { "id": "5", "label": "Stevie Wonder", "value": 25, "display": "25" }
+    ],
+    "source": "Recording Academy, 2024"
+  },
+  {
+    "id": "best-selling-albums",
+    "title": "Rank these albums from most to fewest estimated worldwide sales",
+    "theme": "music",
+    "difficulty": "hard",
+    "unit": "estimated worldwide sales",
+    "items": [
+      { "id": "1", "label": "Thriller — Michael Jackson", "value": 70000000, "display": "~70M" },
+      { "id": "2", "label": "Back in Black — AC/DC", "value": 50000000, "display": "~50M" },
+      { "id": "3", "label": "The Dark Side of the Moon — Pink Floyd", "value": 45000000, "display": "~45M" },
+      { "id": "4", "label": "Come On Over — Shania Twain", "value": 40000000, "display": "~40M" },
+      { "id": "5", "label": "Their Greatest Hits — Eagles", "value": 38000000, "display": "~38M" }
+    ],
+    "source": "RIAA & industry estimates"
+  },
+  {
+    "id": "youtube-music-views",
+    "title": "Rank these music videos from most to fewest YouTube views",
+    "theme": "music",
+    "difficulty": "medium",
+    "unit": "YouTube views",
+    "items": [
+      { "id": "1", "label": "Despacito — Luis Fonsi", "value": 8500000000, "display": "8.5B" },
+      { "id": "2", "label": "Shape of You — Ed Sheeran", "value": 6200000000, "display": "6.2B" },
+      { "id": "3", "label": "See You Again — Wiz Khalifa", "value": 6100000000, "display": "6.1B" },
+      { "id": "4", "label": "Uptown Funk — Bruno Mars", "value": 5200000000, "display": "5.2B" },
+      { "id": "5", "label": "Thinking Out Loud — Ed Sheeran", "value": 3800000000, "display": "3.8B" }
+    ],
+    "source": "YouTube, 2024"
   }
 ]

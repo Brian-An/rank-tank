@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { connection } from 'next/server'
 import { redirect } from 'next/navigation'
 import { GameClient } from './GameClient'
+import { CustomGameWrapper } from './CustomGameWrapper'
 import { getLocalRound } from '@/lib/localRounds'
 import { getCachedRound, setCachedRound } from '@/lib/roundCache'
 import { generateRound } from '@/lib/openai'
@@ -11,10 +12,15 @@ import type { Theme, Difficulty } from '@/lib/types'
 async function GameLoader({
   searchParams,
 }: {
-  searchParams: Promise<{ mode?: string; theme?: string; difficulty?: string; seed?: string }>
+  searchParams: Promise<{ mode?: string; theme?: string; difficulty?: string; seed?: string; custom?: string }>
 }) {
   await connection()
   const params = await searchParams
+
+  if (params.custom) {
+    return <CustomGameWrapper customId={params.custom} />
+  }
+
   const mode = params.mode ?? 'daily'
   const theme = params.theme as Theme | undefined
   const difficulty = (params.difficulty as Difficulty) ?? 'medium'
@@ -50,7 +56,7 @@ async function GameLoader({
 export default function GamePage({
   searchParams,
 }: {
-  searchParams: Promise<{ mode?: string; theme?: string; difficulty?: string; seed?: string }>
+  searchParams: Promise<{ mode?: string; theme?: string; difficulty?: string; seed?: string; custom?: string }>
 }) {
   return (
     <Suspense fallback={null}>

@@ -27,9 +27,10 @@ interface Props {
   locked: boolean
   revealed: boolean
   onReorder: (items: RankItemType[]) => void
+  explanations?: Record<string, string>
 }
 
-export function RankList({ items, correctOrder, locked, revealed, onReorder }: Props) {
+export function RankList({ items, correctOrder, locked, revealed, onReorder, explanations }: Props) {
   const [activeId, setActiveId] = useState<string | null>(null)
 
   const sensors = useSensors(
@@ -75,6 +76,7 @@ export function RankList({ items, correctOrder, locked, revealed, onReorder }: P
                 index={index}
                 locked={locked}
                 revealedCorrectIndex={correctIndex}
+                explanation={explanations?.[item.id]}
               />
             )
           })}

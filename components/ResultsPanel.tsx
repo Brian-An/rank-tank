@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react'
 import { ScoreDisplay } from './ScoreDisplay'
 import { CommentaryCard } from './CommentaryCard'
 import { ShareModal } from './ShareModal'
-import type { RankItem, CommentaryResult } from '@/lib/types'
+import type { RankItem, CommentaryResult, Category } from '@/lib/types'
 
 interface Props {
   score: number
   perfect: boolean
   playerOrder: RankItem[]
   correctOrder: string[]  // ids in correct order
-  category: { title: string }
+  category: Category
   onPlayAgain: () => void
 }
 

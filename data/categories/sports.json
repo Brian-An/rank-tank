@@ -43,5 +43,50 @@
       { "id": "5", "label": "France", "value": 16, "display": "16" }
     ],
     "source": "IOC, 2024"
+  },
+  {
+    "id": "tennis-grand-slams",
+    "title": "Rank these players from most to fewest Grand Slam singles titles (men's)",
+    "theme": "sports",
+    "difficulty": "easy",
+    "unit": "Grand Slam titles",
+    "items": [
+      { "id": "1", "label": "Novak Djokovic", "value": 24, "display": "24" },
+      { "id": "2", "label": "Rafael Nadal", "value": 22, "display": "22" },
+      { "id": "3", "label": "Roger Federer", "value": 20, "display": "20" },
+      { "id": "4", "label": "Pete Sampras", "value": 14, "display": "14" },
+      { "id": "5", "label": "Carlos Alcaraz", "value": 4, "display": "4" }
+    ],
+    "source": "ATP, 2024"
+  },
+  {
+    "id": "f1-race-wins",
+    "title": "Rank these Formula 1 drivers from most to fewest race wins",
+    "theme": "sports",
+    "difficulty": "medium",
+    "unit": "race wins",
+    "items": [
+      { "id": "1", "label": "Lewis Hamilton", "value": 103, "display": "103" },
+      { "id": "2", "label": "Michael Schumacher", "value": 91, "display": "91" },
+      { "id": "3", "label": "Max Verstappen", "value": 63, "display": "63" },
+      { "id": "4", "label": "Sebastian Vettel", "value": 53, "display": "53" },
+      { "id": "5", "label": "Alain Prost", "value": 51, "display": "51" }
+    ],
+    "source": "Formula 1, 2024"
+  },
+  {
+    "id": "premier-league-scorers",
+    "title": "Rank these players from most to fewest Premier League career goals",
+    "theme": "sports",
+    "difficulty": "hard",
+    "unit": "Premier League goals",
+    "items": [
+      { "id": "1", "label": "Alan Shearer", "value": 260, "display": "260" },
+      { "id": "2", "label": "Wayne Rooney", "value": 208, "display": "208" },
+      { "id": "3", "label": "Andrew Cole", "value": 187, "display": "187" },
+      { "id": "4", "label": "Frank Lampard", "value": 177, "display": "177" },
+      { "id": "5", "label": "Thierry Henry", "value": 175, "display": "175" }
+    ],
+    "source": "Premier League, all time"
   }
 ]

@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { RankList } from '@/components/RankList'
 import { GameHeader } from '@/components/GameHeader'
@@ -11,21 +11,65 @@ interface Props {
   category: Category
   shuffledItems: RankItem[]
   isDaily: boolean
+  isCustom?: boolean
 }
 
-export function GameClient({ category, shuffledItems, isDaily }: Props) {
+export function GameClient({ category, shuffledItems, isDaily, isCustom }: Props) {
   const router = useRouter()
   const [items, setItems] = useState<RankItem[]>(shuffledItems)
   const [submitted, setSubmitted] = useState(false)
+  const [hint, setHint] = useState<string | null>(null)
+  const [hintUsed, setHintUsed] = useState(false)
+  const [hintLoading, setHintLoading] = useState(false)
+  const [explanations, setExplanations] = useState<Record<string, string>>({})
 
   const correctOrder = category.items.map((i) => i.id)
+
+  useEffect(() => {
+    if (!submitted) return
+    fetch('/api/explain', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ category }),
+    })
+      .then((r) => r.json())
+      .then((data: { explanations: Record<string, string> }) => setExplanations(data.explanations ?? {}))
+      .catch(() => null)
+  }, [submitted, category])
 
   function handleSubmit() {
     setSubmitted(true)
   }
 
   function handlePlayAgain() {
-    router.push('/')
+    if (isCustom) {
+      router.push('/')
+      return
+    }
+    const seed = Date.now().toString()
+    if (isDaily) {
+      router.push(`/game?mode=random&seed=${seed}`)
+    } else {
+      router.push(`/game?mode=random&theme=${category.theme}&difficulty=${category.difficulty}&seed=${seed}`)
+    }
+  }
+
+  async function handleHint() {
+    setHintLoading(true)
+    setHintUsed(true)
+    try {
+      const res = await fetch('/api/hint', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ category, playerOrder: items.map((i) => i.label) }),
+      })
+      const data = (await res.json()) as { hint: string }
+      setHint(data.hint)
+    } catch {
+      setHint('Try looking at the middle items.')
+    } finally {
+      setHintLoading(false)
+    }
   }
 
   const scoreResult = submitted ? calculateScore(items.map((i) => i.id), correctOrder) : null
@@ -38,7 +82,7 @@ export function GameClient({ category, shuffledItems, isDaily }: Props) {
           ← Back
         </a>
 
-        <GameHeader category={category} isDaily={isDaily} />
+        <GameHeader category={category} isDaily={isDaily} isCustom={isCustom} />
 
         <RankList
           items={items}
@@ -46,15 +90,34 @@ export function GameClient({ category, shuffledItems, isDaily }: Props) {
           locked={submitted}
           revealed={submitted}
           onReorder={setItems}
+          explanations={explanations}
         />
 
         {!submitted ? (
-          <button
-            onClick={handleSubmit}
-            className="w-full py-4 rounded-xl bg-neutral-900 text-white font-bold text-lg hover:bg-neutral-800 active:scale-95 transition-all"
-          >
-            Submit Ranking
-          </button>
+          <div className="space-y-4">
+            <div className="flex flex-col items-center gap-2">
+              {hint && (
+                <p className="text-sm text-neutral-500 text-center text-pretty px-4">{hint}</p>
+              )}
+              {!hintUsed ? (
+                <button
+                  onClick={handleHint}
+                  className="text-sm text-neutral-400 hover:text-neutral-700 underline underline-offset-2 transition-colors"
+                >
+                  Need a hint?
+                </button>
+              ) : hintLoading ? (
+                <p className="text-sm text-neutral-300 motion-safe:animate-pulse">Thinking…</p>
+              ) : null}
+            </div>
+
+            <button
+              onClick={handleSubmit}
+              className="w-full py-4 rounded-xl bg-neutral-900 text-white font-bold text-lg hover:bg-neutral-800 active:scale-95 transition-all"
+            >
+              Submit Ranking
+            </button>
+          </div>
         ) : (
           scoreResult && (
             <ResultsPanel

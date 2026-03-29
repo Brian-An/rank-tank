@@ -58,5 +58,65 @@
       { "id": "5", "label": "Samsung Internet", "value": 260, "display": "2.6%" }
     ],
     "source": "StatCounter, 2024"
+  },
+  {
+    "id": "js-framework-stars",
+    "title": "Rank these JavaScript frameworks from most to fewest GitHub stars",
+    "theme": "tech",
+    "difficulty": "medium",
+    "unit": "GitHub stars",
+    "items": [
+      { "id": "1", "label": "React", "value": 227000, "display": "~227K" },
+      { "id": "2", "label": "Vue.js", "value": 208000, "display": "~208K" },
+      { "id": "3", "label": "Next.js", "value": 127000, "display": "~127K" },
+      { "id": "4", "label": "Angular", "value": 96000, "display": "~96K" },
+      { "id": "5", "label": "Svelte", "value": 80000, "display": "~80K" }
+    ],
+    "source": "GitHub, 2024"
+  },
+  {
+    "id": "social-media-users",
+    "title": "Rank these platforms from most to fewest monthly active users",
+    "theme": "tech",
+    "difficulty": "easy",
+    "unit": "monthly active users",
+    "items": [
+      { "id": "1", "label": "Facebook", "value": 3070000000, "display": "3.07B" },
+      { "id": "2", "label": "YouTube", "value": 2700000000, "display": "2.70B" },
+      { "id": "3", "label": "WhatsApp", "value": 2000000000, "display": "2.0B" },
+      { "id": "4", "label": "TikTok", "value": 1670000000, "display": "1.67B" },
+      { "id": "5", "label": "WeChat", "value": 1340000000, "display": "1.34B" }
+    ],
+    "source": "DataReportal, 2024"
+  },
+  {
+    "id": "cloud-market-share",
+    "title": "Rank these cloud providers from largest to smallest market share",
+    "theme": "tech",
+    "difficulty": "hard",
+    "unit": "% market share",
+    "items": [
+      { "id": "1", "label": "AWS (Amazon)", "value": 3100, "display": "31%" },
+      { "id": "2", "label": "Azure (Microsoft)", "value": 2500, "display": "25%" },
+      { "id": "3", "label": "Google Cloud", "value": 1100, "display": "11%" },
+      { "id": "4", "label": "Alibaba Cloud", "value": 400, "display": "4%" },
+      { "id": "5", "label": "IBM Cloud", "value": 300, "display": "3%" }
+    ],
+    "source": "Synergy Research, Q1 2024"
+  },
+  {
+    "id": "programming-language-age",
+    "title": "Rank these languages from newest to oldest",
+    "theme": "tech",
+    "difficulty": "hard",
+    "unit": "year created",
+    "items": [
+      { "id": "1", "label": "Rust", "value": 2015, "display": "2015" },
+      { "id": "2", "label": "Swift", "value": 2014, "display": "2014" },
+      { "id": "3", "label": "Kotlin", "value": 2011, "display": "2011" },
+      { "id": "4", "label": "Go", "value": 2009, "display": "2009" },
+      { "id": "5", "label": "Scala", "value": 2004, "display": "2004" }
+    ],
+    "source": "Language official release years"
   }
 ]

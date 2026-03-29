@@ -43,5 +43,50 @@
       { "id": "5", "label": "Meta", "value": 135, "display": "$135B" }
     ],
     "source": "Company annual reports, 2023"
+  },
+  {
+    "id": "most-visited-websites",
+    "title": "Rank these websites from most to fewest monthly visits",
+    "theme": "business",
+    "difficulty": "easy",
+    "unit": "monthly visits",
+    "items": [
+      { "id": "1", "label": "Google", "value": 100000000000, "display": "100B+" },
+      { "id": "2", "label": "YouTube", "value": 74000000000, "display": "74B" },
+      { "id": "3", "label": "Facebook", "value": 22000000000, "display": "22B" },
+      { "id": "4", "label": "Wikipedia", "value": 18000000000, "display": "18B" },
+      { "id": "5", "label": "X (Twitter)", "value": 6000000000, "display": "6B" }
+    ],
+    "source": "Similarweb, 2024"
+  },
+  {
+    "id": "brand-value",
+    "title": "Rank these brands from highest to lowest estimated brand value",
+    "theme": "business",
+    "difficulty": "medium",
+    "unit": "brand value (USD billions)",
+    "items": [
+      { "id": "1", "label": "Apple", "value": 502, "display": "$502B" },
+      { "id": "2", "label": "Microsoft", "value": 316, "display": "$316B" },
+      { "id": "3", "label": "Google", "value": 269, "display": "$269B" },
+      { "id": "4", "label": "McDonald's", "value": 191, "display": "$191B" },
+      { "id": "5", "label": "Amazon", "value": 177, "display": "$177B" }
+    ],
+    "source": "Interbrand, 2023"
+  },
+  {
+    "id": "ev-sales-2023",
+    "title": "Rank these automakers from most to fewest electric vehicles sold in 2023",
+    "theme": "business",
+    "difficulty": "hard",
+    "unit": "EVs sold",
+    "items": [
+      { "id": "1", "label": "Tesla", "value": 1808581, "display": "1.81M" },
+      { "id": "2", "label": "BYD", "value": 1575000, "display": "1.58M" },
+      { "id": "3", "label": "Volkswagen Group", "value": 770000, "display": "770K" },
+      { "id": "4", "label": "SAIC", "value": 700000, "display": "700K" },
+      { "id": "5", "label": "Hyundai Motor Group", "value": 520000, "display": "520K" }
+    ],
+    "source": "EV Volumes, 2023"
   }
 ]

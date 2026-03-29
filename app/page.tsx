@@ -1,6 +1,7 @@
 import { LandingHero } from '@/components/LandingHero'
 import { HowToPlay } from '@/components/HowToPlay'
 import { ThemeSelector } from '@/components/ThemeSelector'
+import { CustomCategoryInput } from '@/components/CustomCategoryInput'
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       <div className="max-w-lg mx-auto space-y-8">
         <LandingHero />
         <ThemeSelector />
+        <CustomCategoryInput />
         <HowToPlay />
 
         <footer className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-neutral-300 text-xs pb-4">

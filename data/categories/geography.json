@@ -43,5 +43,50 @@
       { "id": "5", "label": "Brazil", "value": 8516000, "display": "8.52M km²" }
     ],
     "source": "World Bank, 2024"
+  },
+  {
+    "id": "country-gdp",
+    "title": "Rank these countries from highest to lowest GDP (2023)",
+    "theme": "geography",
+    "difficulty": "medium",
+    "unit": "GDP (USD billions)",
+    "items": [
+      { "id": "1", "label": "United States", "value": 27360, "display": "$27.4T" },
+      { "id": "2", "label": "China", "value": 17790, "display": "$17.8T" },
+      { "id": "3", "label": "Germany", "value": 4460, "display": "$4.46T" },
+      { "id": "4", "label": "Japan", "value": 4210, "display": "$4.21T" },
+      { "id": "5", "label": "India", "value": 3730, "display": "$3.73T" }
+    ],
+    "source": "World Bank, 2023"
+  },
+  {
+    "id": "highest-mountains",
+    "title": "Rank these mountains from tallest to shortest",
+    "theme": "geography",
+    "difficulty": "hard",
+    "unit": "height (meters)",
+    "items": [
+      { "id": "1", "label": "Everest", "value": 8849, "display": "8,849m" },
+      { "id": "2", "label": "K2", "value": 8611, "display": "8,611m" },
+      { "id": "3", "label": "Kangchenjunga", "value": 8586, "display": "8,586m" },
+      { "id": "4", "label": "Lhotse", "value": 8516, "display": "8,516m" },
+      { "id": "5", "label": "Makalu", "value": 8485, "display": "8,485m" }
+    ],
+    "source": "National Geographic"
+  },
+  {
+    "id": "longest-rivers",
+    "title": "Rank these rivers from longest to shortest",
+    "theme": "geography",
+    "difficulty": "medium",
+    "unit": "length (km)",
+    "items": [
+      { "id": "1", "label": "Nile", "value": 6650, "display": "6,650 km" },
+      { "id": "2", "label": "Amazon", "value": 6400, "display": "6,400 km" },
+      { "id": "3", "label": "Yangtze", "value": 6300, "display": "6,300 km" },
+      { "id": "4", "label": "Mississippi-Missouri", "value": 6275, "display": "6,275 km" },
+      { "id": "5", "label": "Yenisei", "value": 5539, "display": "5,539 km" }
+    ],
+    "source": "National Geographic"
   }
 ]

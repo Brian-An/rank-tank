@@ -28,5 +28,65 @@
       { "id": "5", "label": "Horse", "value": 55, "display": "55 km/h" }
     ],
     "source": "National Geographic"
+  },
+  {
+    "id": "planet-diameter",
+    "title": "Rank these planets from largest to smallest diameter",
+    "theme": "science",
+    "difficulty": "easy",
+    "unit": "diameter (km)",
+    "items": [
+      { "id": "1", "label": "Jupiter", "value": 142984, "display": "142,984 km" },
+      { "id": "2", "label": "Saturn", "value": 120536, "display": "120,536 km" },
+      { "id": "3", "label": "Uranus", "value": 51118, "display": "51,118 km" },
+      { "id": "4", "label": "Neptune", "value": 49528, "display": "49,528 km" },
+      { "id": "5", "label": "Earth", "value": 12756, "display": "12,756 km" }
+    ],
+    "source": "NASA"
+  },
+  {
+    "id": "melting-points",
+    "title": "Rank these elements from highest to lowest melting point",
+    "theme": "science",
+    "difficulty": "hard",
+    "unit": "melting point (°C)",
+    "items": [
+      { "id": "1", "label": "Tungsten (W)", "value": 3422, "display": "3,422°C" },
+      { "id": "2", "label": "Rhenium (Re)", "value": 3186, "display": "3,186°C" },
+      { "id": "3", "label": "Osmium (Os)", "value": 3033, "display": "3,033°C" },
+      { "id": "4", "label": "Tantalum (Ta)", "value": 3017, "display": "3,017°C" },
+      { "id": "5", "label": "Molybdenum (Mo)", "value": 2623, "display": "2,623°C" }
+    ],
+    "source": "NIST / CRC Handbook"
+  },
+  {
+    "id": "animal-lifespans",
+    "title": "Rank these animals from longest to shortest maximum lifespan",
+    "theme": "science",
+    "difficulty": "hard",
+    "unit": "maximum lifespan (years)",
+    "items": [
+      { "id": "1", "label": "Ocean Quahog Clam", "value": 500, "display": "~500 yrs" },
+      { "id": "2", "label": "Greenland Shark", "value": 400, "display": "~400 yrs" },
+      { "id": "3", "label": "Bowhead Whale", "value": 200, "display": "~200 yrs" },
+      { "id": "4", "label": "Galápagos Tortoise", "value": 100, "display": "~100 yrs" },
+      { "id": "5", "label": "African Elephant", "value": 70, "display": "~70 yrs" }
+    ],
+    "source": "Scientific literature"
+  },
+  {
+    "id": "organ-weights",
+    "title": "Rank these organs from heaviest to lightest (average adult)",
+    "theme": "science",
+    "difficulty": "medium",
+    "unit": "average weight (grams)",
+    "items": [
+      { "id": "1", "label": "Skin", "value": 5000, "display": "~5,000g" },
+      { "id": "2", "label": "Liver", "value": 1500, "display": "~1,500g" },
+      { "id": "3", "label": "Brain", "value": 1400, "display": "~1,400g" },
+      { "id": "4", "label": "Lungs (both)", "value": 1100, "display": "~1,100g" },
+      { "id": "5", "label": "Heart", "value": 300, "display": "~300g" }
+    ],
+    "source": "Gray's Anatomy"
   }
 ]

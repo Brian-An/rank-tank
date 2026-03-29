@@ -28,5 +28,65 @@
       { "id": "5", "label": "Schindler's List (1993)", "value": 89, "display": "8.9" }
     ],
     "source": "IMDb, 2024"
+  },
+  {
+    "id": "franchise-box-office",
+    "title": "Rank these movie franchises from highest to lowest total worldwide gross",
+    "theme": "movies",
+    "difficulty": "easy",
+    "unit": "total worldwide gross",
+    "items": [
+      { "id": "1", "label": "Marvel Cinematic Universe", "value": 29700000000, "display": "$29.7B" },
+      { "id": "2", "label": "Star Wars", "value": 10300000000, "display": "$10.3B" },
+      { "id": "3", "label": "Harry Potter / Fantastic Beasts", "value": 9600000000, "display": "$9.6B" },
+      { "id": "4", "label": "James Bond", "value": 7800000000, "display": "$7.8B" },
+      { "id": "5", "label": "Fast & Furious", "value": 7300000000, "display": "$7.3B" }
+    ],
+    "source": "Box Office Mojo, 2024"
+  },
+  {
+    "id": "movie-budgets",
+    "title": "Rank these films from highest to lowest production budget",
+    "theme": "movies",
+    "difficulty": "hard",
+    "unit": "production budget (USD millions)",
+    "items": [
+      { "id": "1", "label": "Pirates of the Caribbean: On Stranger Tides", "value": 379, "display": "$379M" },
+      { "id": "2", "label": "Avengers: Age of Ultron", "value": 365, "display": "$365M" },
+      { "id": "3", "label": "Avengers: Endgame", "value": 356, "display": "$356M" },
+      { "id": "4", "label": "Tangled", "value": 260, "display": "$260M" },
+      { "id": "5", "label": "Transformers: Age of Extinction", "value": 210, "display": "$210M" }
+    ],
+    "source": "The Numbers / Box Office Mojo"
+  },
+  {
+    "id": "movie-runtimes",
+    "title": "Rank these films from longest to shortest runtime",
+    "theme": "movies",
+    "difficulty": "medium",
+    "unit": "runtime (minutes)",
+    "items": [
+      { "id": "1", "label": "Gone with the Wind (1939)", "value": 238, "display": "238 min" },
+      { "id": "2", "label": "Lawrence of Arabia (1962)", "value": 227, "display": "227 min" },
+      { "id": "3", "label": "Ben-Hur (1959)", "value": 212, "display": "212 min" },
+      { "id": "4", "label": "The Return of the King (2003)", "value": 201, "display": "201 min" },
+      { "id": "5", "label": "Avengers: Endgame (2019)", "value": 182, "display": "182 min" }
+    ],
+    "source": "IMDb"
+  },
+  {
+    "id": "mcu-box-office",
+    "title": "Rank these Marvel films from highest to lowest worldwide gross",
+    "theme": "movies",
+    "difficulty": "medium",
+    "unit": "worldwide gross",
+    "items": [
+      { "id": "1", "label": "Avengers: Endgame", "value": 2799000000, "display": "$2.80B" },
+      { "id": "2", "label": "Avengers: Infinity War", "value": 2048000000, "display": "$2.05B" },
+      { "id": "3", "label": "Spider-Man: No Way Home", "value": 1901000000, "display": "$1.90B" },
+      { "id": "4", "label": "The Avengers (2012)", "value": 1520000000, "display": "$1.52B" },
+      { "id": "5", "label": "Black Panther", "value": 1347000000, "display": "$1.35B" }
+    ],
+    "source": "Box Office Mojo, 2024"
   }
 ]

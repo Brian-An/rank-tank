@@ -10,9 +10,10 @@ interface Props {
   locked: boolean
   revealedCorrectIndex?: number
   isOverlay?: boolean
+  explanation?: string
 }
 
-export function RankItem({ item, index, locked, revealedCorrectIndex, isOverlay }: Props) {
+export function RankItem({ item, index, locked, revealedCorrectIndex, isOverlay, explanation }: Props) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
     id: item.id,
     disabled: locked,
@@ -57,7 +58,15 @@ export function RankItem({ item, index, locked, revealedCorrectIndex, isOverlay 
         </div>
       )}
 
-      <div className="flex-1 text-neutral-900 font-medium text-sm sm:text-base">{item.label}</div>
+      <div className="flex-1 min-w-0">
+        <div className="text-neutral-900 font-medium text-sm sm:text-base">{item.label}</div>
+        {isRevealed && explanation && (
+          <p className="text-xs text-neutral-400 mt-0.5 leading-relaxed text-pretty">{explanation}</p>
+        )}
+        {isRevealed && !explanation && (
+          <div className="mt-0.5 h-3.5 w-3/4 rounded bg-neutral-100 motion-safe:animate-pulse" />
+        )}
+      </div>
 
       {isRevealed && (
         <div className="flex items-center gap-2 shrink-0">
